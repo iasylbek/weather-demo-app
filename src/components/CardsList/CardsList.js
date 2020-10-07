@@ -24,7 +24,9 @@ class CardList extends Component {
     let cardItemArr = [];
     let prev_date = null;
     this.props.cards.list.forEach((card) => {
-      let curr_date = new Date(card.dt * 1000).toLocaleDateString();
+      let curr_date = new Date(
+        (card.dt + this.props.cards.city.timezone) * 1000
+      ).toLocaleDateString();
       if (curr_date !== prev_date) {
         cardItemArr.push(card);
       }
@@ -36,14 +38,16 @@ class CardList extends Component {
   render() {
     const today = this.state.cardsState.find(
       (card) =>
-        new Date(card.dt * 1000).toLocaleDateString() ===
-        new Date().toLocaleDateString()
+        new Date(
+          (card.dt + this.props.cards.city.timezone) * 1000
+        ).toLocaleDateString() === new Date().toLocaleDateString()
     );
     const cards = this.state.cardsState
       .filter(
         (card) =>
-          new Date(card.dt * 1000).toLocaleDateString() !==
-          new Date().toLocaleDateString()
+          new Date(
+            (card.dt + this.props.cards.city.timezone) * 1000
+          ).toLocaleDateString() !== new Date().toLocaleDateString()
       )
       .slice(0, 4);
 

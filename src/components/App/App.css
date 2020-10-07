@@ -10,7 +10,7 @@
 }
 
 .cities > h1 {
-  margin: 10px 22px 10px 22px;
+  margin: 25px 22px 25px 22px;
   cursor: pointer;
 }
 
@@ -20,7 +20,7 @@
 
 .active {
   color: #266e9b;
-  font-weight: 700;
+  font-weight: bolder;
 }
 
 .progress {
@@ -40,7 +40,7 @@ html {
 
 h1 {
   color: black;
-  font-weight: 300;
-  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-weight: lighter;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 22px;
 }
