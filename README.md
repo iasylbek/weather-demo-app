@@ -1,3 +1,8 @@
+This is a weather demo app using openweather API and ReactJS
+You can check it online at: (http://weather-demo-app.surge.sh/)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
